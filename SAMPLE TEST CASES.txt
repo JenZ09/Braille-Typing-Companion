@@ -1,0 +1,48 @@
+SAMPLE TEST CASES:
+#can be imported into a .py file
+
+
+test_cases=[
+                {
+                    "input": "d dqko wqko",
+                    "expected": "ant",
+                    "description": "Correct input for 'ant'",
+                    "language": "English"
+                },
+                {
+                    "input": "d dko wqko\wqk d dko",
+                    "expected": "ant sad",
+                    "description": "Typo in second char (dko instead of dqko)",
+                    "language": "English"
+                },
+                {
+                    "input": "d wqk dko",
+                    "expected": "gato",
+                    "description": "Based on key stroke weightage",
+                    "language": "Spanish"
+                },
+                {
+                    "input": "d d\w q k",
+                    "expected": "sad sad",
+                    "description": "Two incomplete words-also uses best frequency and last used match",
+                    "language": "English"
+                },
+                {
+                    "input": "d dqko wqko\d w\w q k",
+                    "expected": "ant bad sad",
+                    "description": "Three word sentence with last 2 words incomplete",
+                    "language": "English"
+                },
+                {
+                    "input": "dkopq\dko p q",
+                    "expected": "pen car",
+                    "description": "Invalid QWERTY inputs for both words-final suggestion based on keystroke placement",
+                    "language": "English"
+                },
+                {
+                    "input": "d w q k\d q k o",
+                    "expected": "sad sad",
+                    "description": "Two words with correct inputs for 's' and 'n'-based on keystokes and most recently used",
+                    "language": "English"
+                }
+            ]
